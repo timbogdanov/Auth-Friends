@@ -3,9 +3,9 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 const FriendsList = () => {
   const initialFriend = {
-    id: Date.now(),
+    id: () => {},
     name: '',
-    age: '',
+    age: 0,
     email: '',
   };
 
@@ -28,7 +28,10 @@ const FriendsList = () => {
   };
 
   const onChange = (e) => {
-    setNewFriend({ ...newFriend, [e.target.name]: e.target.value });
+    setNewFriend({
+      ...newFriend,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const addNewFriend = (e) => {
@@ -44,7 +47,11 @@ const FriendsList = () => {
   };
 
   const deleteFriend = (id) => {
-    axiosWithAuth().delete(`api/friends/${id}`);
+    axiosWithAuth()
+      .delete(`api/friends/${id}`)
+      .then((res) => {
+        console.log(res);
+      });
     getData();
   };
 

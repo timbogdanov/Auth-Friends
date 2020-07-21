@@ -11,9 +11,9 @@ let nextId = 7;
 let friends = [
   {
     id: 1,
-    name: 'Rachel Green',
-    age: 30,
-    email: 'rachel@friends.com',
+    name: 'Mark Pekun',
+    age: 80,
+    email: 'mark@friends.com',
   },
   {
     id: 2,

@@ -21,7 +21,7 @@ const Login = (props) => {
     setTimeout(() => {
       axios.post('http://localhost:5000/api/login', credentials).then((res) => {
         localStorage.setItem('token', res.data.payload);
-        props.history.push('/protected');
+        props.history.push('/friends');
       });
     }, [1000]);
   };

@@ -43,6 +43,11 @@ const FriendsList = () => {
     getData();
   };
 
+  const deleteFriend = (id) => {
+    axiosWithAuth().delete(`api/friends/${id}`);
+    getData();
+  };
+
   return (
     <div>
       <form onSubmit={addNewFriend}>
@@ -78,6 +83,7 @@ const FriendsList = () => {
           <h2>Name: {friend.name}</h2>
           <p>Age: {friend.age}</p>
           <p>Email: {friend.email}</p>
+          <button onClick={() => deleteFriend(friend.id)}>delete</button>
         </div>
       ))}
     </div>

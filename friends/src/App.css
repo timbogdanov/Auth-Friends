@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+  font-family: monospace;
+}
+
+form .input,
+form button {
+  padding: 15px 20px;
+  border: none;
+  background: #F0f0f0;
+  font-family: monospace;
+}
+
+form .button {
+  background: #000;
+  color: white;
+  cursor: pointer;
+}

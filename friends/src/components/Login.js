@@ -11,7 +11,7 @@ const Login = (props) => {
   const [credentials, setCredentials] = useState(initialState);
 
   const onChange = (e) => {
-    setCredentials({ [e.target.name]: e.target.value });
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
   const login = (e) => {
@@ -48,7 +48,10 @@ const Login = (props) => {
         <button className='button'>
           {isLoading ? (
             <span>
-              <img src='https://thumbs.gfycat.com/AgileChubbyGelada-size_restricted.gif'></img>
+              <img
+                alt='loading'
+                src='https://thumbs.gfycat.com/AgileChubbyGelada-size_restricted.gif'
+              ></img>
             </span>
           ) : (
             <span>Button</span>

@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+  font-family: monospace;
+}
+
+form .input,
+form button {
+  padding: 15px 20px;
+  border: none;
+  background: #F0f0f0;
+  font-family: monospace;
+}
+
+form .button {
+  background: white;
+  outline: none;
+  color: black;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 50px;
+}
